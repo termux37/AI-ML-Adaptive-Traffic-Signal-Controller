@@ -1,0 +1,36 @@
+{
+  "run_id": "test_actuated",
+  "generated_at": "2026-10-20T05:24:01.401400+00:00",
+  "metadata": {
+    "scenario": "balanced",
+    "seed": 42,
+    "controller": "actuated",
+    "duration_seconds": 120,
+    "warmup_seconds": 20,
+    "step_length": 1.0
+  },
+  "summary_metrics": {
+    "scored_duration_seconds": 100.0,
+    "total_completed_vehicles": 17,
+    "scored_throughput_vehicles": 17,
+    "throughput_vph": 612.0,
+    "mean_travel_time_seconds": 35.0,
+    "mean_delay_seconds": 5.0,
+    "average_queue_length": 8.54,
+    "max_queue_length": 18,
+    "average_waiting_time_seconds": 221.98,
+    "max_wait_time_seconds": 85.0,
+    "phase_switches_total": 2,
+    "switching_frequency_per_1000s": 20.0,
+    "jains_fairness_index": 0.7428,
+    "approach_avg_queues": {
+      "north": 2.1,
+      "south": 4.14,
+      "east": 1.53,
+      "west": 0.77
+    }
+  },
+  "artifacts": {
+    "timeseries_csv": "data\\runs\\test_actuated_timeseries.csv"
+  }
+}

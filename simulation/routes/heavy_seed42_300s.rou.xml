@@ -1,0 +1,745 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="veh_passenger" vClass="passenger" length="4.5" width="1.8" maxSpeed="13.89" accel="2.6" decel="4.5" color="#3498db" sigma="0.5" />
+    <vType id="veh_bus" vClass="bus" length="12.0" width="2.5" maxSpeed="11.11" accel="1.6" decel="3.5" color="#e67e22" sigma="0.5" />
+    <vType id="veh_truck" vClass="truck" length="8.5" width="2.4" maxSpeed="10.00" accel="1.4" decel="3.2" color="#95a5a6" sigma="0.5" />
+    <vType id="veh_motorcycle" vClass="motorcycle" length="2.2" width="0.9" maxSpeed="15.00" accel="3.5" decel="5.0" color="#2ecc71" sigma="0.5" />
+    <vehicle id="veh_west_00185" type="veh_motorcycle" depart="4.40" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00001" type="veh_passenger" depart="4.90" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00051" type="veh_passenger" depart="5.04" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00052" type="veh_passenger" depart="5.66" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00002" type="veh_passenger" depart="6.11" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00112" type="veh_bus" depart="9.39" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00053" type="veh_passenger" depart="9.92" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00054" type="veh_passenger" depart="10.27" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00186" type="veh_passenger" depart="11.73" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00113" type="veh_bus" depart="12.35" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00114" type="veh_passenger" depart="13.59" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00187" type="veh_passenger" depart="13.95" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00115" type="veh_motorcycle" depart="15.50" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00003" type="veh_passenger" depart="16.80" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00004" type="veh_passenger" depart="16.94" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00116" type="veh_passenger" depart="17.07" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00005" type="veh_passenger" depart="17.07" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00006" type="veh_passenger" depart="20.85" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00055" type="veh_passenger" depart="21.59" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00056" type="veh_passenger" depart="22.89" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00188" type="veh_passenger" depart="23.04" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00057" type="veh_passenger" depart="23.58" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00058" type="veh_bus" depart="26.65" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00059" type="veh_passenger" depart="27.66" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00007" type="veh_bus" depart="28.81" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00060" type="veh_passenger" depart="30.31" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00008" type="veh_passenger" depart="34.56" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00061" type="veh_passenger" depart="35.68" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00117" type="veh_truck" depart="36.13" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00118" type="veh_passenger" depart="36.72" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00062" type="veh_truck" depart="38.15" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00189" type="veh_bus" depart="38.59" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00063" type="veh_passenger" depart="39.52" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00064" type="veh_passenger" depart="42.15" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00190" type="veh_passenger" depart="44.49" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00009" type="veh_passenger" depart="49.69" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00010" type="veh_passenger" depart="50.18" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00119" type="veh_passenger" depart="52.49" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00065" type="veh_truck" depart="54.48" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00120" type="veh_passenger" depart="55.22" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00011" type="veh_passenger" depart="58.07" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00066" type="veh_motorcycle" depart="58.31" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00121" type="veh_passenger" depart="59.70" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00191" type="veh_bus" depart="60.64" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00122" type="veh_passenger" depart="63.82" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00123" type="veh_passenger" depart="63.83" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00192" type="veh_passenger" depart="64.35" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00067" type="veh_truck" depart="66.99" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00124" type="veh_passenger" depart="69.93" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00193" type="veh_truck" depart="70.66" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00125" type="veh_passenger" depart="72.10" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00126" type="veh_truck" depart="74.03" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00012" type="veh_passenger" depart="75.43" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00068" type="veh_passenger" depart="76.06" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00069" type="veh_passenger" depart="77.21" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00194" type="veh_truck" depart="79.18" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00070" type="veh_passenger" depart="79.50" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00127" type="veh_passenger" depart="80.13" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00195" type="veh_passenger" depart="80.52" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00128" type="veh_passenger" depart="82.65" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00196" type="veh_truck" depart="82.81" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00129" type="veh_truck" depart="83.31" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00197" type="veh_bus" depart="83.77" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00013" type="veh_truck" depart="83.92" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00198" type="veh_passenger" depart="85.77" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00071" type="veh_passenger" depart="86.85" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00199" type="veh_truck" depart="87.32" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00200" type="veh_passenger" depart="87.75" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00014" type="veh_passenger" depart="88.06" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00130" type="veh_passenger" depart="88.73" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00015" type="veh_passenger" depart="89.30" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00131" type="veh_passenger" depart="90.45" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00016" type="veh_passenger" depart="90.57" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00132" type="veh_passenger" depart="92.08" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00201" type="veh_passenger" depart="94.57" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00017" type="veh_passenger" depart="95.42" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00018" type="veh_truck" depart="96.54" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00133" type="veh_passenger" depart="97.18" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00202" type="veh_passenger" depart="97.81" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00134" type="veh_truck" depart="98.33" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00203" type="veh_passenger" depart="99.01" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00019" type="veh_passenger" depart="101.56" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00072" type="veh_passenger" depart="101.99" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00204" type="veh_passenger" depart="103.19" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00205" type="veh_passenger" depart="105.85" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00135" type="veh_passenger" depart="105.97" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00020" type="veh_passenger" depart="107.83" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00073" type="veh_passenger" depart="108.08" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00136" type="veh_passenger" depart="109.44" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00206" type="veh_passenger" depart="111.67" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00207" type="veh_passenger" depart="112.29" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00208" type="veh_passenger" depart="115.98" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00209" type="veh_passenger" depart="117.15" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00137" type="veh_passenger" depart="117.63" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00138" type="veh_passenger" depart="118.85" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00139" type="veh_truck" depart="120.20" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00140" type="veh_passenger" depart="120.56" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00141" type="veh_passenger" depart="121.60" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00142" type="veh_passenger" depart="122.95" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00074" type="veh_passenger" depart="124.70" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00143" type="veh_passenger" depart="129.62" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00021" type="veh_passenger" depart="129.71" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00075" type="veh_passenger" depart="131.32" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00144" type="veh_motorcycle" depart="132.28" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00076" type="veh_passenger" depart="134.67" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00210" type="veh_passenger" depart="135.17" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00022" type="veh_bus" depart="135.25" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00211" type="veh_passenger" depart="135.68" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00145" type="veh_passenger" depart="135.78" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00023" type="veh_passenger" depart="136.49" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00212" type="veh_passenger" depart="136.63" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00024" type="veh_truck" depart="137.99" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00213" type="veh_passenger" depart="138.17" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00214" type="veh_truck" depart="143.91" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00146" type="veh_bus" depart="144.83" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00215" type="veh_passenger" depart="147.15" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00025" type="veh_passenger" depart="148.02" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00147" type="veh_passenger" depart="150.12" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00216" type="veh_passenger" depart="150.19" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00077" type="veh_passenger" depart="150.22" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00026" type="veh_passenger" depart="150.44" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00217" type="veh_passenger" depart="150.44" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00027" type="veh_passenger" depart="151.92" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00028" type="veh_truck" depart="153.38" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00078" type="veh_passenger" depart="154.56" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00079" type="veh_passenger" depart="155.17" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00029" type="veh_motorcycle" depart="155.83" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00218" type="veh_passenger" depart="158.73" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00030" type="veh_passenger" depart="159.25" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00080" type="veh_passenger" depart="159.50" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00031" type="veh_bus" depart="159.81" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00032" type="veh_passenger" depart="162.44" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00219" type="veh_passenger" depart="163.50" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00081" type="veh_truck" depart="163.71" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00148" type="veh_passenger" depart="164.50" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00082" type="veh_passenger" depart="164.81" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00083" type="veh_passenger" depart="167.23" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00220" type="veh_motorcycle" depart="167.47" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00221" type="veh_passenger" depart="168.07" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00084" type="veh_passenger" depart="169.05" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00149" type="veh_truck" depart="170.60" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00085" type="veh_motorcycle" depart="171.99" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00086" type="veh_passenger" depart="172.36" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00150" type="veh_passenger" depart="174.41" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00222" type="veh_passenger" depart="175.58" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00151" type="veh_passenger" depart="177.50" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00223" type="veh_truck" depart="178.45" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00152" type="veh_passenger" depart="182.37" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00087" type="veh_truck" depart="185.35" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00153" type="veh_passenger" depart="187.10" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00088" type="veh_truck" depart="187.57" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00154" type="veh_passenger" depart="188.72" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00033" type="veh_motorcycle" depart="189.09" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00155" type="veh_passenger" depart="192.45" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00089" type="veh_motorcycle" depart="193.40" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00156" type="veh_passenger" depart="198.13" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00090" type="veh_bus" depart="198.50" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00034" type="veh_passenger" depart="198.55" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00091" type="veh_truck" depart="200.20" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00224" type="veh_passenger" depart="200.57" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00157" type="veh_passenger" depart="200.64" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00092" type="veh_passenger" depart="200.90" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00158" type="veh_truck" depart="201.75" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00035" type="veh_passenger" depart="204.05" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00093" type="veh_passenger" depart="204.76" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00225" type="veh_truck" depart="205.09" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00159" type="veh_truck" depart="205.97" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00226" type="veh_passenger" depart="206.21" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00227" type="veh_passenger" depart="207.03" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00228" type="veh_passenger" depart="207.04" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00229" type="veh_passenger" depart="208.69" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00036" type="veh_passenger" depart="208.96" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00094" type="veh_passenger" depart="210.83" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00037" type="veh_truck" depart="211.87" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00095" type="veh_truck" depart="212.30" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00160" type="veh_passenger" depart="212.93" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00038" type="veh_passenger" depart="213.33" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00230" type="veh_passenger" depart="214.52" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00161" type="veh_truck" depart="215.01" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00096" type="veh_passenger" depart="221.29" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00097" type="veh_bus" depart="222.84" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00039" type="veh_passenger" depart="225.03" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00231" type="veh_passenger" depart="226.88" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00098" type="veh_passenger" depart="227.71" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00162" type="veh_passenger" depart="229.73" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00040" type="veh_passenger" depart="229.92" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00099" type="veh_passenger" depart="231.56" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00100" type="veh_truck" depart="231.93" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00232" type="veh_passenger" depart="232.08" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00163" type="veh_passenger" depart="233.52" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00164" type="veh_passenger" depart="234.71" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00101" type="veh_passenger" depart="235.72" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00233" type="veh_truck" depart="235.85" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00102" type="veh_passenger" depart="236.49" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00165" type="veh_passenger" depart="236.68" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00041" type="veh_bus" depart="236.83" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00166" type="veh_passenger" depart="237.54" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00042" type="veh_passenger" depart="240.45" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00043" type="veh_truck" depart="240.55" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00167" type="veh_passenger" depart="242.22" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00234" type="veh_passenger" depart="244.27" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00235" type="veh_passenger" depart="246.03" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00168" type="veh_passenger" depart="246.21" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00169" type="veh_passenger" depart="246.91" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00103" type="veh_truck" depart="247.49" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00236" type="veh_passenger" depart="247.67" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_north_00044" type="veh_passenger" depart="249.10" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00170" type="veh_passenger" depart="249.19" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00237" type="veh_passenger" depart="253.44" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00171" type="veh_bus" depart="256.07" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00238" type="veh_passenger" depart="256.71" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00104" type="veh_passenger" depart="258.49" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00105" type="veh_truck" depart="259.01" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00045" type="veh_passenger" depart="259.20" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00239" type="veh_passenger" depart="259.42" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_west_00240" type="veh_truck" depart="259.88" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00106" type="veh_passenger" depart="261.52" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00046" type="veh_bus" depart="262.39" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00241" type="veh_motorcycle" depart="263.99" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_east_00172" type="veh_passenger" depart="264.63" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00173" type="veh_motorcycle" depart="264.72" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00174" type="veh_bus" depart="266.79" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00242" type="veh_passenger" depart="269.35" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_north_00047" type="veh_passenger" depart="269.36" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00175" type="veh_truck" depart="271.85" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00176" type="veh_passenger" depart="272.92" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00048" type="veh_truck" depart="273.19" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00177" type="veh_passenger" depart="273.57" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00107" type="veh_motorcycle" depart="274.27" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00178" type="veh_bus" depart="274.75" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00179" type="veh_passenger" depart="275.63" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_north_00049" type="veh_passenger" depart="275.83" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_west_00243" type="veh_passenger" depart="276.12" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00180" type="veh_motorcycle" depart="276.21" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_east_00181" type="veh_passenger" depart="276.76" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_north_00050" type="veh_passenger" depart="282.12" departLane="best" departSpeed="max">
+        <route edges="edge_n2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00182" type="veh_passenger" depart="282.19" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_south_00108" type="veh_passenger" depart="282.26" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_west_00244" type="veh_passenger" depart="288.02" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2s" />
+    </vehicle>
+    <vehicle id="veh_east_00183" type="veh_passenger" depart="288.22" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_south_00109" type="veh_truck" depart="288.67" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00245" type="veh_passenger" depart="292.85" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_east_00184" type="veh_bus" depart="292.95" departLane="best" departSpeed="max">
+        <route edges="edge_e2c edge_c2n" />
+    </vehicle>
+    <vehicle id="veh_west_00246" type="veh_passenger" depart="294.90" departLane="best" departSpeed="max">
+        <route edges="edge_w2c edge_c2e" />
+    </vehicle>
+    <vehicle id="veh_south_00110" type="veh_bus" depart="296.45" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2w" />
+    </vehicle>
+    <vehicle id="veh_south_00111" type="veh_passenger" depart="297.94" departLane="best" departSpeed="max">
+        <route edges="edge_s2c edge_c2n" />
+    </vehicle>
+</routes>

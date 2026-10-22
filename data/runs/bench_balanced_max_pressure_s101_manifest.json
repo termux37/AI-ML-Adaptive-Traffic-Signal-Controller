@@ -1,0 +1,36 @@
+{
+  "run_id": "bench_balanced_max_pressure_s101",
+  "generated_at": "2026-10-20T05:28:57.844139+00:00",
+  "metadata": {
+    "scenario": "balanced",
+    "seed": 101,
+    "controller": "max_pressure",
+    "duration_seconds": 90,
+    "warmup_seconds": 30,
+    "step_length": 1.0
+  },
+  "summary_metrics": {
+    "scored_duration_seconds": 60.0,
+    "total_completed_vehicles": 18,
+    "scored_throughput_vehicles": 18,
+    "throughput_vph": 1080.0,
+    "mean_travel_time_seconds": 35.0,
+    "mean_delay_seconds": 5.0,
+    "average_queue_length": 3.93,
+    "max_queue_length": 8,
+    "average_waiting_time_seconds": 70.65,
+    "max_wait_time_seconds": 61.0,
+    "phase_switches_total": 4,
+    "switching_frequency_per_1000s": 66.67,
+    "jains_fairness_index": 0.5829,
+    "approach_avg_queues": {
+      "north": 0.48,
+      "south": 1.42,
+      "east": 1.47,
+      "west": 0.57
+    }
+  },
+  "artifacts": {
+    "timeseries_csv": "data\\runs\\bench_balanced_max_pressure_s101_timeseries.csv"
+  }
+}

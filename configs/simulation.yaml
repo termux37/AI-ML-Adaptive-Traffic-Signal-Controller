@@ -1,0 +1,19 @@
+# Simulation Configuration
+network:
+  net_file: "simulation/network/intersection.net.xml"
+  additional_files:
+    - "simulation/network/detectors.add.xml"
+  tls_id: "junction_center"
+
+runtime:
+  step_length: 1.0
+  gui: false
+  time_to_teleport: -1
+  default_duration: 3600
+  warmup_seconds: 300
+
+safety:
+  min_green_seconds: 10.0
+  max_green_seconds: 60.0
+  yellow_seconds: 3.0
+  all_red_seconds: 2.0

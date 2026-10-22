@@ -1,0 +1,36 @@
+{
+  "run_id": "cli_heavy_actuated_s42",
+  "generated_at": "2026-10-20T05:46:44.838865+00:00",
+  "metadata": {
+    "scenario": "heavy",
+    "seed": 42,
+    "controller": "actuated",
+    "duration_seconds": 300,
+    "warmup_seconds": 30,
+    "step_length": 1.0
+  },
+  "summary_metrics": {
+    "scored_duration_seconds": 158.0,
+    "total_completed_vehicles": 67,
+    "scored_throughput_vehicles": 67,
+    "throughput_vph": 1526.58,
+    "mean_travel_time_seconds": 35.0,
+    "mean_delay_seconds": 5.0,
+    "average_queue_length": 22.89,
+    "max_queue_length": 48,
+    "average_waiting_time_seconds": 687.61,
+    "max_wait_time_seconds": 143.0,
+    "phase_switches_total": 3,
+    "switching_frequency_per_1000s": 18.99,
+    "jains_fairness_index": 0.7417,
+    "approach_avg_queues": {
+      "north": 2.07,
+      "south": 6.92,
+      "east": 8.25,
+      "west": 5.65
+    }
+  },
+  "artifacts": {
+    "timeseries_csv": "data\\runs\\cli_heavy_actuated_s42_timeseries.csv"
+  }
+}

@@ -1,0 +1,27 @@
+# Virtual Camera & Perception Configuration
+model:
+  weights: "yolov8n.pt"
+  confidence_threshold: 0.35
+  iou_threshold: 0.45
+  target_classes:
+    - 2   # car
+    - 3   # motorcycle
+    - 5   # bus
+    - 7   # truck
+  device: "cpu"
+
+tracking:
+  tracker_type: "iou"
+  max_age: 10
+  min_hits: 2
+  iou_threshold: 0.3
+
+roi_approaches:
+  north:
+    polygon: [[180, 0], [320, 0], [320, 200], [180, 200]]
+  south:
+    polygon: [[180, 300], [320, 300], [320, 500], [180, 500]]
+  east:
+    polygon: [[300, 180], [500, 180], [500, 320], [300, 320]]
+  west:
+    polygon: [[0, 180], [200, 180], [200, 320], [0, 320]]

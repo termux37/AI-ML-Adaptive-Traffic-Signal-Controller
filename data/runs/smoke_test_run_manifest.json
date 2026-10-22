@@ -1,0 +1,36 @@
+{
+  "run_id": "smoke_test_run",
+  "generated_at": "2026-10-22T12:38:40.122113+00:00",
+  "metadata": {
+    "scenario": "balanced",
+    "seed": 42,
+    "controller": "fixed_time",
+    "duration_seconds": 60,
+    "warmup_seconds": 10,
+    "step_length": 1.0
+  },
+  "summary_metrics": {
+    "scored_duration_seconds": 50.0,
+    "total_completed_vehicles": 3,
+    "scored_throughput_vehicles": 3,
+    "throughput_vph": 216.0,
+    "mean_travel_time_seconds": 35.0,
+    "mean_delay_seconds": 5.0,
+    "average_queue_length": 4.04,
+    "max_queue_length": 11,
+    "average_waiting_time_seconds": 48.98,
+    "max_wait_time_seconds": 30.0,
+    "phase_switches_total": 2,
+    "switching_frequency_per_1000s": 40.0,
+    "jains_fairness_index": 0.4687,
+    "approach_avg_queues": {
+      "north": 0.58,
+      "south": 0.18,
+      "east": 2.36,
+      "west": 0.92
+    }
+  },
+  "artifacts": {
+    "timeseries_csv": "data\\runs\\smoke_test_run_timeseries.csv"
+  }
+}

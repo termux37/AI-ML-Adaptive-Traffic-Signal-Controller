@@ -1,0 +1,36 @@
+{
+  "run_id": "test_milestone1_fixed_time",
+  "generated_at": "2026-10-20T05:23:49.995028+00:00",
+  "metadata": {
+    "scenario": "balanced",
+    "seed": 42,
+    "controller": "fixed_time",
+    "duration_seconds": 120,
+    "warmup_seconds": 20,
+    "step_length": 1.0
+  },
+  "summary_metrics": {
+    "scored_duration_seconds": 100.0,
+    "total_completed_vehicles": 13,
+    "scored_throughput_vehicles": 13,
+    "throughput_vph": 468.0,
+    "mean_travel_time_seconds": 35.0,
+    "mean_delay_seconds": 5.0,
+    "average_queue_length": 10.19,
+    "max_queue_length": 22,
+    "average_waiting_time_seconds": 225.55,
+    "max_wait_time_seconds": 64.0,
+    "phase_switches_total": 4,
+    "switching_frequency_per_1000s": 40.0,
+    "jains_fairness_index": 0.6308,
+    "approach_avg_queues": {
+      "north": 2.72,
+      "south": 5.01,
+      "east": 1.22,
+      "west": 1.24
+    }
+  },
+  "artifacts": {
+    "timeseries_csv": "data\\runs\\test_milestone1_fixed_time_timeseries.csv"
+  }
+}

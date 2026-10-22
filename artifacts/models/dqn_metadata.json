@@ -1,0 +1,22 @@
+{
+  "model_name": "DQN_MlpPolicy",
+  "saved_at": "2026-10-20T05:25:32.578410+00:00",
+  "total_timesteps": 500,
+  "seed": 42,
+  "scenario": "balanced",
+  "observation_dim": 25,
+  "action_dim": 4,
+  "device": "cpu",
+  "net_arch": [
+    128,
+    128
+  ],
+  "hyperparameters": {
+    "learning_rate": 0.0005,
+    "buffer_size": 50000,
+    "batch_size": 64,
+    "gamma": 0.99,
+    "train_freq": 4,
+    "target_update_interval": 1000
+  }
+}

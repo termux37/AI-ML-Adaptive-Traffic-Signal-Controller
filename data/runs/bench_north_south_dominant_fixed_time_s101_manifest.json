@@ -1,0 +1,36 @@
+{
+  "run_id": "bench_north_south_dominant_fixed_time_s101",
+  "generated_at": "2026-10-20T05:29:01.168284+00:00",
+  "metadata": {
+    "scenario": "north_south_dominant",
+    "seed": 101,
+    "controller": "fixed_time",
+    "duration_seconds": 90,
+    "warmup_seconds": 30,
+    "step_length": 1.0
+  },
+  "summary_metrics": {
+    "scored_duration_seconds": 60.0,
+    "total_completed_vehicles": 6,
+    "scored_throughput_vehicles": 6,
+    "throughput_vph": 360.0,
+    "mean_travel_time_seconds": 35.0,
+    "mean_delay_seconds": 5.0,
+    "average_queue_length": 11.78,
+    "max_queue_length": 26,
+    "average_waiting_time_seconds": 199.02,
+    "max_wait_time_seconds": 53.0,
+    "phase_switches_total": 2,
+    "switching_frequency_per_1000s": 33.33,
+    "jains_fairness_index": 0.4966,
+    "approach_avg_queues": {
+      "north": 7.1,
+      "south": 3.82,
+      "east": 0.12,
+      "west": 0.75
+    }
+  },
+  "artifacts": {
+    "timeseries_csv": "data\\runs\\bench_north_south_dominant_fixed_time_s101_timeseries.csv"
+  }
+}

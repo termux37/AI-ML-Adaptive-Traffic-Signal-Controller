@@ -1,0 +1,8 @@
+# Dashboard Application Configuration
+app_name: "AI & ML Based Adaptive Traffic Control System"
+version: "1.0.0"
+theme: "dark_operations"
+disclaimer: "SIMULATION RESEARCH PLATFORM - NOT CERTIFIED FOR REAL-WORLD PHYSICAL TRAFFIC CONTROL"
+server:
+  host: "127.0.0.1"
+  port: 8501

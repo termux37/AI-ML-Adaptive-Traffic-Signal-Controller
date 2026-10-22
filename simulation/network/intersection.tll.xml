@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tlLogics version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tllogic_file.xsd">
+    <tlLogic id="junction_center" type="static" programID="0" offset="0">
+        <!-- 
+        Link Order (16 links total):
+        0: N2C_0 -> C2W_0 (N Right)
+        1: N2C_0 -> C2S_0 (N Straight)
+        2: N2C_1 -> C2S_1 (N Straight)
+        3: N2C_1 -> C2E_1 (N Left)
+        4: E2C_0 -> C2N_0 (E Right)
+        5: E2C_0 -> C2W_0 (E Straight)
+        6: E2C_1 -> C2W_1 (E Straight)
+        7: E2C_1 -> C2S_1 (E Left)
+        8: S2C_0 -> C2E_0 (S Right)
+        9: S2C_0 -> C2N_0 (S Straight)
+        10: S2C_1 -> C2N_1 (S Straight)
+        11: S2C_1 -> C2W_1 (S Left)
+        12: W2C_0 -> C2S_0 (W Right)
+        13: W2C_0 -> C2E_0 (W Straight)
+        14: W2C_1 -> C2E_1 (W Straight)
+        15: W2C_1 -> C2N_1 (W Left)
+        -->
+        <!-- Phase 0: North-South Green (Through + Right) -->
+        <!-- Links 0,1,2 (N r,s,s) and Links 8,9,10 (S r,s,s) are Green -->
+        <phase duration="30" state="GGGrrrrrGGGrrrrr"/>
+        <!-- Phase 1: North-South Yellow -->
+        <phase duration="3"  state="yyyrrrrryyyrrrrr"/>
+        <!-- Phase 2: All-Red Clearance -->
+        <phase duration="2"  state="rrrrrrrrrrrrrrrr"/>
+        <!-- Phase 3: North-South Protected Left Turns -->
+        <!-- Link 3 (N Left) and Link 11 (S Left) are Green -->
+        <phase duration="15" state="rrrGrrrrrrrGrrrr"/>
+        <!-- Phase 4: North-South Left Yellow -->
+        <phase duration="3"  state="rrryrrrrrrryrrrr"/>
+        <!-- Phase 5: All-Red Clearance -->
+        <phase duration="2"  state="rrrrrrrrrrrrrrrr"/>
+        <!-- Phase 6: East-West Green (Through + Right) -->
+        <!-- Links 4,5,6 (E r,s,s) and Links 12,13,14 (W r,s,s) are Green -->
+        <phase duration="30" state="rrrrGGGrrrrrGGGr"/>
+        <!-- Phase 7: East-West Yellow -->
+        <phase duration="3"  state="rrrryyyrrrrryyyr"/>
+        <!-- Phase 8: All-Red Clearance -->
+        <phase duration="2"  state="rrrrrrrrrrrrrrrr"/>
+        <!-- Phase 9: East-West Protected Left Turns -->
+        <!-- Link 7 (E Left) and Link 15 (W Left) are Green -->
+        <phase duration="15" state="rrrrrrrGrrrrrrrG"/>
+        <!-- Phase 10: East-West Left Yellow -->
+        <phase duration="3"  state="rrrrrrryrrrrrrry"/>
+        <!-- Phase 11: All-Red Clearance -->
+        <phase duration="2"  state="rrrrrrrrrrrrrrrr"/>
+    </tlLogic>
+</tlLogics>

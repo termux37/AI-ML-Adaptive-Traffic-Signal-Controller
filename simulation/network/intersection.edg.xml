@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <!-- Incoming edges to central junction -->
+    <edge id="edge_n2c" from="node_north" to="junction_center" numLanes="2" speed="13.89" priority="2"/>
+    <edge id="edge_s2c" from="node_south" to="junction_center" numLanes="2" speed="13.89" priority="2"/>
+    <edge id="edge_e2c" from="node_east" to="junction_center" numLanes="2" speed="13.89" priority="2"/>
+    <edge id="edge_w2c" from="node_west" to="junction_center" numLanes="2" speed="13.89" priority="2"/>
+
+    <!-- Outgoing edges from central junction -->
+    <edge id="edge_c2n" from="junction_center" to="node_north" numLanes="2" speed="13.89" priority="1"/>
+    <edge id="edge_c2s" from="junction_center" to="node_south" numLanes="2" speed="13.89" priority="1"/>
+    <edge id="edge_c2e" from="junction_center" to="node_east" numLanes="2" speed="13.89" priority="1"/>
+    <edge id="edge_c2w" from="junction_center" to="node_west" numLanes="2" speed="13.89" priority="1"/>
+</edges>

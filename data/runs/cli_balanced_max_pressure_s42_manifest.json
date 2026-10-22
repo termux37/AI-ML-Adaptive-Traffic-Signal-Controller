@@ -1,0 +1,36 @@
+{
+  "run_id": "cli_balanced_max_pressure_s42",
+  "generated_at": "2026-10-20T05:45:01.733158+00:00",
+  "metadata": {
+    "scenario": "balanced",
+    "seed": 42,
+    "controller": "max_pressure",
+    "duration_seconds": 90,
+    "warmup_seconds": 30,
+    "step_length": 1.0
+  },
+  "summary_metrics": {
+    "scored_duration_seconds": 60.0,
+    "total_completed_vehicles": 15,
+    "scored_throughput_vehicles": 15,
+    "throughput_vph": 900.0,
+    "mean_travel_time_seconds": 35.0,
+    "mean_delay_seconds": 5.0,
+    "average_queue_length": 2.63,
+    "max_queue_length": 4,
+    "average_waiting_time_seconds": 31.52,
+    "max_wait_time_seconds": 36.0,
+    "phase_switches_total": 2,
+    "switching_frequency_per_1000s": 33.33,
+    "jains_fairness_index": 0.6097,
+    "approach_avg_queues": {
+      "north": 0.23,
+      "south": 1.42,
+      "east": 0.68,
+      "west": 0.3
+    }
+  },
+  "artifacts": {
+    "timeseries_csv": "data\\runs\\cli_balanced_max_pressure_s42_timeseries.csv"
+  }
+}
