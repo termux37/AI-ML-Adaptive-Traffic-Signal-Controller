@@ -39,6 +39,7 @@ Desktop.ini
 # Documentation and specifications (excluded from repo)
 docs/
 documentation/
+report/
 AETHER_Traffic_Intelligence_Master_Spec.md
 Adaptive_Traffic_Control_Master_Spec.md
 *_Master_Spec.md
