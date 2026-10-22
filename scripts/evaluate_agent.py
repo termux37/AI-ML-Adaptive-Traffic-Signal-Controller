@@ -1,6 +1,11 @@
 """CLI evaluation script comparing baseline and RL controllers."""
 
 import argparse
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
 from traffic_ai.config.schemas import ScenarioName
 from traffic_ai.experiments.runner import BenchmarkRunner
 

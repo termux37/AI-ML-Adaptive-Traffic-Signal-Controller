@@ -45,10 +45,8 @@ class TrafficSignalEnv(gym.Env):
 
         self.reward_weights = reward_weights or {
             "weight_queue": 1.0,
-            "weight_wait": 0.05,
-            "weight_throughput": 2.0,
-            "weight_switch": 2.0,
-            "weight_starvation": 1.5,
+            "weight_throughput": 4.0,
+            "weight_switch": 0.2,
         }
 
         # Action space: 4 discrete green phases
@@ -69,7 +67,7 @@ class TrafficSignalEnv(gym.Env):
         self.prev_total_wait: float = 0.0
         self.prev_completed: int = 0
         self.current_step: int = 0
-        self.max_steps: int = int(self.scenario_config.duration_seconds / self.decision_interval)
+        self.max_steps: int = max(10, int(self.scenario_config.duration_seconds / 12.0))
 
     def _build_observation(self, state: TrafficState) -> np.ndarray:
         """Constructs a normalized 25-dimensional observation vector."""
@@ -121,8 +119,11 @@ class TrafficSignalEnv(gym.Env):
         )
         self.runner.start()
 
-        # Step 1 tick to initialize state
+        # Step until min_green (10s) is satisfied so the agent can act immediately
         state = self.runner.step()
+        while state.time_in_green < self.safety_config.min_green_seconds and self.runner.is_running:
+            state = self.runner.step()
+
         self.prev_total_queue = float(state.total_queue)
         self.prev_total_wait = float(state.total_waiting_time)
         self.prev_completed = state.total_completed_vehicles
@@ -136,39 +137,47 @@ class TrafficSignalEnv(gym.Env):
         if self.runner is None or not self.runner.is_running:
             raise RuntimeError("Environment step called before reset().")
 
-        # Step simulation forward across the decision interval (e.g. 5 seconds)
         curr_phase_before = self.runner.safety_manager.current_green_id
-        steps_in_epoch = int(self.decision_interval / self.sim_config.step_length)
+        target_phase = int(action)
+        self.runner.controller.propose_action = lambda s: target_phase
 
-        latest_state = None
-        for step_i in range(steps_in_epoch):
-            # Propose action to runner's safety manager on first tick or when transition finishes
-            if step_i == 0:
-                self.runner.controller.propose_action = lambda s, a=action: a
+        # If switching, execute 5s clearance (yellow + all-red) + min_green (10s) = 15s
+        # If holding, execute min_green (10s)
+        duration_to_step = int(
+            (self.safety_config.yellow_seconds + self.safety_config.all_red_seconds + self.safety_config.min_green_seconds)
+            if target_phase != curr_phase_before
+            else self.safety_config.min_green_seconds
+        )
+        steps_in_epoch = max(1, int(duration_to_step / self.sim_config.step_length))
 
+        latest_state = self.runner.current_state
+        step_count = 0
+        total_queue_accum = 0.0
+        total_wait_accum = 0.0
+
+        for _ in range(steps_in_epoch):
             latest_state = self.runner.step()
+            step_count += 1
+            total_queue_accum += latest_state.total_queue
+            total_wait_accum += latest_state.total_waiting_time
+            if not self.runner.is_running:
+                break
 
         self.current_step += 1
 
-        # Calculate reward components
         curr_queue = float(latest_state.total_queue)
         curr_wait = float(latest_state.total_waiting_time)
         throughput_delta = float(latest_state.total_completed_vehicles - self.prev_completed)
-
         queue_diff = self.prev_total_queue - curr_queue
         wait_diff = self.prev_total_wait - curr_wait
-        switched = 1.0 if self.runner.safety_manager.current_green_id != curr_phase_before else 0.0
+        mean_q = float(total_queue_accum / max(1, step_count))
+        switched = 1.0 if target_phase != curr_phase_before else 0.0
 
-        max_wait = latest_state.max_waiting_time
-        starvation_penalty = max(0.0, (max_wait - 60.0) / 60.0)
+        w_queue = self.reward_weights.get("weight_queue", 1.0)
+        w_throughput = self.reward_weights.get("weight_throughput", 4.0)
+        w_switch = self.reward_weights.get("weight_switch", 0.2)
 
-        reward = (
-            self.reward_weights["weight_queue"] * queue_diff
-            + self.reward_weights["weight_wait"] * wait_diff
-            + self.reward_weights["weight_throughput"] * throughput_delta
-            - self.reward_weights["weight_switch"] * switched
-            - self.reward_weights["weight_starvation"] * starvation_penalty
-        )
+        reward = - w_queue * mean_q + w_throughput * throughput_delta - w_switch * switched
 
         # Update previous tracking
         self.prev_total_queue = curr_queue
@@ -176,7 +185,7 @@ class TrafficSignalEnv(gym.Env):
         self.prev_completed = latest_state.total_completed_vehicles
 
         # Termination checks
-        terminated = False
+        terminated = not self.runner.is_running
         truncated = self.current_step >= self.max_steps
 
         obs = self._build_observation(latest_state)
@@ -185,10 +194,9 @@ class TrafficSignalEnv(gym.Env):
             "wait_diff": wait_diff,
             "throughput_delta": throughput_delta,
             "switched": switched,
-            "starvation_penalty": starvation_penalty,
             "total_queue": curr_queue,
             "total_waiting_time": curr_wait,
-            "max_wait_time": max_wait,
+            "max_wait_time": latest_state.max_waiting_time,
             "active_phase": latest_state.current_green_id,
         }
 

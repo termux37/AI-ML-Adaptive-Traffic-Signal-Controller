@@ -1,7 +1,11 @@
 """CLI script to train DQN traffic signal controller."""
 
 import argparse
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
 from traffic_ai.config.schemas import ScenarioName
 from traffic_ai.training.train_dqn import train_dqn
 

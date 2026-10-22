@@ -22,7 +22,7 @@ def render_page():
 
     with col_launch:
         st.markdown("### 🚀 Launch DQN Training")
-        train_timesteps = st.number_input("Target Timesteps", value=1000, min_value=200, max_value=50000, step=500)
+        train_timesteps = st.number_input("Target Timesteps", value=2000, min_value=200, max_value=50000, step=500)
         train_seed = st.number_input("Training Seed", value=42, step=1)
         train_scenario = st.selectbox("Training Demand Profile", [s.value for s in ScenarioName], index=1)
         train_device = st.selectbox("Compute Device", ["cpu", "cuda"], index=0, help="CPU is recommended for fast TraCI simulation IPC")

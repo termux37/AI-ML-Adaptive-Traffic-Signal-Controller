@@ -20,7 +20,6 @@ from traffic_ai.dashboard.pages import (
     p08_analytics,
     p09_registry,
     p10_system_health,
-    p11_documentation,
 )
 
 # Configure Streamlit page
@@ -75,7 +74,6 @@ nav_options = [
     "8. Analytics & Reports",
     "9. Model Registry",
     "10. System Health & Diagnostics",
-    "11. Documentation & About",
 ]
 
 selected_page = st.sidebar.radio("Navigation", nav_options, index=0)
@@ -93,7 +91,7 @@ elif selected_page.startswith("3."):
 elif selected_page.startswith("4."):
     p04_perception.render_page()
 elif selected_page.startswith("5."):
-    p05_scenario_lab.py if False else p05_scenario_lab.render_page()
+    p05_scenario_lab.render_page()
 elif selected_page.startswith("6."):
     p06_training.render_page()
 elif selected_page.startswith("7."):
@@ -104,5 +102,3 @@ elif selected_page.startswith("9."):
     p09_registry.render_page()
 elif selected_page.startswith("10."):
     p10_system_health.render_page()
-elif selected_page.startswith("11."):
-    p11_documentation.render_page()

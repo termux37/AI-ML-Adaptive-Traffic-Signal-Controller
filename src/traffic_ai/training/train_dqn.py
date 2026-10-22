@@ -16,7 +16,7 @@ from traffic_ai.utils.logging import setup_logger
 
 
 def train_dqn(
-    total_timesteps: int = 5000,
+    total_timesteps: int = 2000,
     seed: int = 42,
     scenario_name: ScenarioName = ScenarioName.BALANCED,
     model_output_dir: Path = Path("artifacts/models"),
@@ -35,13 +35,15 @@ def train_dqn(
         with open(rl_cfg_path, "r", encoding="utf-8") as f:
             rl_config = yaml.safe_load(f) or {}
 
-    learning_rate = rl_config.get("learning_rate", 0.0005)
+    learning_rate = rl_config.get("learning_rate", 0.001)
     buffer_size = rl_config.get("buffer_size", 20000)
     batch_size = rl_config.get("batch_size", 64)
-    gamma = rl_config.get("gamma", 0.99)
-    train_freq = rl_config.get("train_freq", 4)
-    target_update_interval = rl_config.get("target_update_interval", 500)
-    learning_starts = rl_config.get("learning_starts", 200)
+    gamma = rl_config.get("gamma", 0.95)
+    train_freq = rl_config.get("train_freq", 1)
+    target_update_interval = rl_config.get("target_update_interval", 150)
+    learning_starts = rl_config.get("learning_starts", 100)
+    exploration_fraction = rl_config.get("exploration_fraction", 0.3)
+    exploration_final_eps = rl_config.get("exploration_final_eps", 0.02)
 
     # Build Training Environment
     scenario = ScenarioManager.get_preset_config(
@@ -54,7 +56,8 @@ def train_dqn(
     env = TrafficSignalEnv(
         scenario_config=scenario,
         sim_config=sim_cfg,
-        decision_interval=5.0,
+        decision_interval=10.0,
+        reward_weights=rl_config.get("reward_weights"),
     )
 
     # Initialize DQN model
@@ -71,9 +74,9 @@ def train_dqn(
         train_freq=train_freq,
         gradient_steps=1,
         target_update_interval=target_update_interval,
-        exploration_fraction=0.3,
+        exploration_fraction=exploration_fraction,
         exploration_initial_eps=1.0,
-        exploration_final_eps=0.05,
+        exploration_final_eps=exploration_final_eps,
         policy_kwargs=policy_kwargs,
         device=device,
         seed=seed,

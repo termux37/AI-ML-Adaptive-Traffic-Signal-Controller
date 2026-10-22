@@ -1,29 +1,27 @@
 # Reinforcement Learning Configuration
 algorithm: "DQN"
 policy: "MlpPolicy"
-learning_rate: 0.0005
-buffer_size: 50000
-learning_starts: 1000
+learning_rate: 0.001
+buffer_size: 20000
+learning_starts: 100
 batch_size: 64
 tau: 1.0
-gamma: 0.99
-train_freq: 4
+gamma: 0.95
+train_freq: 1
 gradient_steps: 1
-target_update_interval: 1000
-exploration_fraction: 0.2
+target_update_interval: 150
+exploration_fraction: 0.3
 exploration_initial_eps: 1.0
-exploration_final_eps: 0.05
+exploration_final_eps: 0.02
 device: "cpu"
 
 training:
-  total_timesteps: 30000
-  eval_freq: 5000
-  eval_episodes: 3
+  total_timesteps: 2000
+  eval_freq: 500
+  eval_episodes: 2
   save_path: "artifacts/models/dqn_best.zip"
 
 reward_weights:
   weight_queue: 1.0
-  weight_wait: 0.5
-  weight_throughput: 2.0
-  weight_switch: 3.0
-  weight_starvation: 1.5
+  weight_throughput: 4.0
+  weight_switch: 0.2

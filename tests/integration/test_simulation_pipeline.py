@@ -16,6 +16,7 @@ from traffic_ai.simulation.runner import SimulationRunner
     FixedTimeController,
     ActuatedController,
     MaxPressureController,
+    DQNController,
 ])
 def test_controller_end_to_end_execution(controller_cls, tmp_path):
     scenario = ScenarioConfig(name=ScenarioName.LOW, seed=77, duration_seconds=60, warmup_seconds=10)

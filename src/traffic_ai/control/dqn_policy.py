@@ -15,13 +15,18 @@ class DQNController(TrafficSignalController):
     def __init__(
         self,
         model_path: Optional[str] = "artifacts/models/dqn_best.zip",
+        min_green: float = 10.0,
+        decision_interval: float = 10.0,
         device: str = "cpu",
         name: str = "dqn",
     ):
         super().__init__(name=name)
         self.model_path = model_path
+        self.min_green = min_green
+        self.decision_interval = decision_interval
         self.device = device
         self.model: Optional[DQN] = None
+        self.last_decision_time: float = -1.0
 
         if model_path and Path(model_path).exists():
             self._load_model(model_path)
@@ -35,7 +40,7 @@ class DQNController(TrafficSignalController):
             self.model = None
 
     def reset(self) -> None:
-        pass
+        self.last_decision_time = -1.0
 
     def _state_to_obs(self, state: TrafficState) -> np.ndarray:
         """Constructs identical 25-dim normalized observation vector used during training."""
@@ -63,8 +68,8 @@ class DQNController(TrafficSignalController):
         return obs
 
     def propose_action(self, state: TrafficState) -> Optional[int]:
-        if state.is_in_transition:
-            return None
+        if state.is_in_transition or state.time_in_green < self.min_green:
+            return state.current_green_id
 
         # If trained model is available, predict action
         if self.model is not None:

@@ -96,6 +96,7 @@ def render_page():
         live_kpi_placeholder = st.empty()
         live_visual_placeholder = st.empty()
         live_app_placeholder = st.empty()
+        live_chart_placeholder = st.empty()
 
         if start_live:
             st.info(f"Running Real-Time Simulation: {scenario_choice} | Controller: {controller_choice} | Seed: {sim_seed}")
@@ -139,9 +140,25 @@ def render_page():
                 run_id=run_id,
             ) as runner:
                 runner.start()
+                live_timeseries = []
 
                 for tick in range(int(sim_duration)):
                     state = runner.step()
+
+                    qn = state.approaches.get("north").queue_length if "north" in state.approaches else 0
+                    qs = state.approaches.get("south").queue_length if "south" in state.approaches else 0
+                    qe = state.approaches.get("east").queue_length if "east" in state.approaches else 0
+                    qw = state.approaches.get("west").queue_length if "west" in state.approaches else 0
+
+                    live_timeseries.append({
+                        "Time (s)": int(state.timestamp),
+                        "Total Queue": int(state.total_queue),
+                        "Active Vehicles": int(state.total_vehicles),
+                        "North": qn,
+                        "South": qs,
+                        "East": qe,
+                        "West": qw,
+                    })
 
                     # Render top-down camera scene with vehicles, signals, stoplines
                     raw_bgr = pipeline.render_virtual_scene(
@@ -172,21 +189,24 @@ def render_page():
                     with live_app_placeholder.container():
                         st.markdown("#### Approach Demand & Instantaneous Queues")
                         an, asu, ae, aw = st.columns(4)
-                        qn = state.approaches.get("north").queue_length if "north" in state.approaches else 0
-                        qs = state.approaches.get("south").queue_length if "south" in state.approaches else 0
-                        qe = state.approaches.get("east").queue_length if "east" in state.approaches else 0
-                        qw = state.approaches.get("west").queue_length if "west" in state.approaches else 0
-
                         an.markdown(f"<div class='kpi-card'><div class='kpi-label'>North</div><div class='kpi-value'>{qn} veh</div></div>", unsafe_allow_html=True)
                         asu.markdown(f"<div class='kpi-card'><div class='kpi-label'>South</div><div class='kpi-value'>{qs} veh</div></div>", unsafe_allow_html=True)
                         ae.markdown(f"<div class='kpi-card'><div class='kpi-label'>East</div><div class='kpi-value'>{qe} veh</div></div>", unsafe_allow_html=True)
                         aw.markdown(f"<div class='kpi-card'><div class='kpi-label'>West</div><div class='kpi-value'>{qw} veh</div></div>", unsafe_allow_html=True)
 
+                    # Update Live Charts every 2 ticks or on last tick
+                    if tick % 2 == 0 or tick == int(sim_duration) - 1:
+                        with live_chart_placeholder.container():
+                            st.markdown("#### 📊 Real-Time Queue & Traffic Progression")
+                            df_live = pd.DataFrame(live_timeseries).set_index("Time (s)")
+                            st.line_chart(df_live[["Total Queue", "Active Vehicles"]], height=220)
+                            st.markdown("#### 🔄 Per-Approach Real-Time Queues")
+                            st.line_chart(df_live[["North", "South", "East", "West"]], height=200)
+
                     if delay_sec > 0:
                         time.sleep(delay_sec)
 
             st.success(f"Real-time simulation completed! Artifacts recorded to data/runs/{run_id}_*")
-            st.rerun()
 
         elif selected_run:
             sm = selected_run.get("summary_metrics", {})
