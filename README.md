@@ -3,6 +3,8 @@
 # 🚦 AI & ML Based Adaptive Traffic Control System
 **Microscopic Traffic Simulation • Deep Reinforcement Learning • Deterministic Safety Guard • YOLOv8 Perception**
 
+[![Release: v1.0.0](https://img.shields.io/badge/Release-v1.0.0-007EC6?style=for-the-badge&logo=github)](https://github.com/termux37/AI-ML-Adaptive-Traffic-Signal-Controller/releases/tag/v1.0.0)
+[![CI Pipeline](https://img.shields.io/badge/CI-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/termux37/AI-ML-Adaptive-Traffic-Signal-Controller/actions)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![SUMO](https://img.shields.io/badge/Eclipse%20SUMO-1.27.1-2C5E8A?style=for-the-badge&logo=eclipseide&logoColor=white)](https://eclipse.dev/sumo/)
@@ -12,7 +14,7 @@
 
 <br/>
 
-[Overview](#-overview) • [System Architecture](#-system-architecture) • [Signal Phases](#-signal-phase-catalog) • [Safety Guard](#-deterministic-signal-safety-manager) • [Control Regimes](#-control-regimes) • [Perception Pipeline](#-synthetic-vision-pipeline) • [Benchmark Analytics](#-benchmark-analytics) • [Tech Stack](#-technologies-used) • [Repository Structure](#-repository-structure) • [Literature References](#-research-papers--literature-references)
+[Overview](#-overview) • [System Architecture](#-system-architecture) • [Signal Phases](#-signal-phase-catalog) • [Safety Guard](#-deterministic-signal-safety-manager) • [Control Regimes](#-control-regimes) • [Perception Pipeline](#-synthetic-vision-pipeline) • [Benchmark Analytics](#-benchmark-analytics) • [Tech Stack](#-technologies-used) • [Repository Structure](#-repository-structure) • [Literature References](#-research-papers--literature-references) • [Changelog](CHANGELOG.md) • [Contributing](CONTRIBUTING.md)
 
 </div>
 
