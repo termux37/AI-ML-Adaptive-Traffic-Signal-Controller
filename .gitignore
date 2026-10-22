@@ -40,6 +40,8 @@ Desktop.ini
 docs/
 documentation/
 AETHER_Traffic_Intelligence_Master_Spec.md
+Adaptive_Traffic_Control_Master_Spec.md
+*_Master_Spec.md
 *.md.bak
 
 # Generated simulation data, runs, and artifacts
