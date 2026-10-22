@@ -36,19 +36,14 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Large model downloads (Ultralytics auto-downloads yolov8n.pt on first run)
+# Documentation and specifications (excluded from repo)
+docs/
+documentation/
+AETHER_Traffic_Intelligence_Master_Spec.md
+*.md.bak
+
+# Generated simulation data, runs, and artifacts
+data/
+artifacts/
 *.pt
-
-# Ephemeral simulation runs and generated routes during training
-data/runs/*.log
-data/runs/rl_ep_*.csv
-data/runs/rl_ep_*.json
-simulation/routes/rl_ep_*.rou.xml
-simulation/routes/realtime_*.rou.xml
-
-# Keep structure of artifact and data directories
-!artifacts/models/.gitkeep
-!artifacts/videos/.gitkeep
-!artifacts/reports/.gitkeep
-!data/runs/.gitkeep
-!data/processed/.gitkeep
+*.log

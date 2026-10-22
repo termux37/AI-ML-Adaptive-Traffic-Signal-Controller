@@ -23,7 +23,7 @@
   4. *Deep Q-Network (DQN):* Deep reinforcement learning policy (Stable-Baselines3 MlpPolicy) trained over a normalized 25-dimensional observation space.
 - **Virtual-Camera Perception Pipeline:** Top-down virtual camera scene rendering with Ultralytics YOLOv8n object detection, multi-class vehicle identification (car, bus, truck, motorcycle), spatial IoU tracking, calibrated approach ROI polygon mapping, and live MAE error telemetry vs SUMO ground truth.
 - **Operations Console Dashboard:** A mature, high-density dark operations-console interface built with Streamlit and Plotly across 11 fully functional pages.
-- **Zero Fabricated Metrics:** Every number, chart, training curve, and benchmark result is produced directly by real simulation runs and stored in transparent CSV/JSON manifests.
+- **Zero Fabricated Metrics:** Every number, chart, training curve, and benchmark result is produced directly by real simulation runs.
 
 ---
 
@@ -137,7 +137,7 @@ Evaluated under identical synthetic demand seeds ($seed = 101$):
 ai_ml_project/
 ├── app.py                          # Streamlit operations console entry point
 ├── pyproject.toml                  # Project packaging and pytest settings
-├── README.md                       # Master engineering documentation
+├── README.md                       # Master project guide
 ├── LICENSE                         # MIT License
 ├── .gitignore                      # Git ignore rules for Python, SUMO, PyTorch
 ├── .env.example                    # Environment variable template
@@ -173,59 +173,8 @@ ai_ml_project/
 │   ├── train_agent.py              # DQN training CLI
 │   ├── evaluate_agent.py           # Benchmark evaluation CLI
 │   └── make_demo_video.py          # Perception demo video generator
-├── tests/
-│   ├── unit/                       # Unit tests (safety, env, perception)
-│   ├── integration/                # End-to-end simulation tests
-│   └── smoke/                      # Automated smoke check tests
-├── artifacts/
-│   ├── models/                     # Saved DQN checkpoints & progress telemetry
-│   ├── videos/                     # Annotated perception video clips
-│   └── reports/                    # Generated research summaries
-├── data/
-│   ├── runs/                       # Per-run CSV time-series & JSON manifests
-│   └── processed/                  # Aggregated benchmark comparison data
-├── documentation/                  # Comprehensive technical handbook
-│   ├── 01_SYSTEM_OVERVIEW_AND_ARCHITECTURE.md
-│   ├── 02_SIMULATION_AND_NETWORK_MODULE.md
-│   ├── 03_DETERMINISTIC_SAFETY_MANAGER.md
-│   ├── 04_CONTROLLER_REGIMES_AND_ALGORITHMS.md
-│   ├── 05_VIRTUAL_CAMERA_AND_YOLO_PERCEPTION.md
-│   ├── 06_METRICS_ANALYTICS_AND_BENCHMARKING.md
-│   ├── 07_OPERATIONS_CONSOLE_DASHBOARD.md
-│   ├── 08_SCRIPTS_AND_LAUNCHERS.md
-│   ├── 09_TESTING_AND_VERIFICATION.md
-│   └── INDEX.md
-└── docs/                           # Architecture, methodology, safety & metrics
-    ├── ARCHITECTURE.md             # Subsystem architecture & data flow
-    ├── METHODOLOGY.md              # State, action, reward, and algorithm design
-    ├── RESEARCH_NOTES.md           # PressLight (KDD 2019) literature review
-    ├── METRICS.md                  # Formulas, units, and aggregation rules
-    ├── SAFETY.md                   # Deterministic safety manager specification
-    ├── USER_GUIDE.md               # Complete dashboard walkthrough
-    ├── LIMITATIONS.md              # Sim-to-real gap & camera constraints
-    ├── IMPLEMENTATION_LOG.md       # Development journal and audit record
-    └── EXPERIMENT_PROTOCOL.md      # Scientific benchmark execution guidelines
+└── tests/
+    ├── unit/                       # Unit tests (safety, env, perception)
+    ├── integration/                # End-to-end simulation tests
+    └── smoke/                      # Automated smoke check tests
 ```
-
----
-
-## 📖 Complete Documentation Index
-- [Master Technical Documentation Hub](documentation/INDEX.md)
-  - [01: System Overview & Architecture](documentation/01_SYSTEM_OVERVIEW_AND_ARCHITECTURE.md)
-  - [02: Simulation & Road Network Specification](documentation/02_SIMULATION_AND_NETWORK_MODULE.md)
-  - [03: Deterministic Safety Manager](documentation/03_DETERMINISTIC_SAFETY_MANAGER.md)
-  - [04: Controller Regimes & Algorithms](documentation/04_CONTROLLER_REGIMES_AND_ALGORITHMS.md)
-  - [05: Virtual Camera & YOLO Perception](documentation/05_VIRTUAL_CAMERA_AND_YOLO_PERCEPTION.md)
-  - [06: Metrics, Analytics & Benchmarking](documentation/06_METRICS_ANALYTICS_AND_BENCHMARKING.md)
-  - [07: Operations Console Dashboard](documentation/07_OPERATIONS_CONSOLE_DASHBOARD.md)
-  - [08: Scripts & Master Launchers](documentation/08_SCRIPTS_AND_LAUNCHERS.md)
-  - [09: Testing & Verification Suite](documentation/09_TESTING_AND_VERIFICATION.md)
-- [Architecture & Data Flow](docs/ARCHITECTURE.md)
-- [Methodology & RL Formulation](docs/METHODOLOGY.md)
-- [Deterministic Safety Manager](docs/SAFETY.md)
-- [Metric Definitions & Calculations](docs/METRICS.md)
-- [User Guide & Operations Console Walkthrough](docs/USER_GUIDE.md)
-- [Literature Review & PressLight Notes](docs/RESEARCH_NOTES.md)
-- [Limitations & Scientific Constraints](docs/LIMITATIONS.md)
-- [Experiment & Benchmarking Protocol](docs/EXPERIMENT_PROTOCOL.md)
-- [Implementation Journal & Test Log](docs/IMPLEMENTATION_LOG.md)
