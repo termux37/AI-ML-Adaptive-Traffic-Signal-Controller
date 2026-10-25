@@ -1,0 +1,29 @@
+# AI & ML Based Adaptive Traffic Control System
+# Python Dependency Requirements
+
+# Core SUMO Simulation & TraCI Inter-Process Communication
+traci>=1.20.0
+sumolib>=1.20.0
+
+# Deep Reinforcement Learning & Neural Networks
+torch>=2.0.0
+gymnasium>=1.0.0
+stable-baselines3>=2.0.0
+
+# Computer Vision & Perception Pipeline
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+
+# Interactive Operations Console & Telemetry Dashboard
+streamlit>=1.30.0
+plotly>=5.18.0
+
+# Data Science, Math & Configuration Schemas
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+pydantic>=2.0.0
+pyyaml>=6.0
+
+# Test Suite & Verification
+pytest>=7.0.0

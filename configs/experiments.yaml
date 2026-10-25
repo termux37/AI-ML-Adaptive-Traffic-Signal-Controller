@@ -1,0 +1,27 @@
+# Benchmarking & Experiment Scenarios
+scenarios:
+  - "low"
+  - "balanced"
+  - "heavy"
+  - "north_south_dominant"
+  - "east_west_dominant"
+  - "bursty"
+  - "unseen_evaluation"
+
+controllers:
+  - "fixed_time"
+  - "actuated"
+  - "max_pressure"
+  - "dqn"
+
+seeds:
+  - 42
+  - 101
+  - 202
+  - 303
+  - 404
+
+duration_seconds: 3600
+warmup_seconds: 300
+step_length: 1.0
+output_dir: "data/runs"

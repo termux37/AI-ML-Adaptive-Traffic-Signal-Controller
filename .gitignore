@@ -1,0 +1,52 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Caches and temporary directories
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Documentation and specifications (excluded from repo)
+docs/
+documentation/
+report/
+AETHER_Traffic_Intelligence_Master_Spec.md
+Adaptive_Traffic_Control_Master_Spec.md
+*_Master_Spec.md
+*.md.bak
+
+# Generated simulation data, runs, and artifacts
+data/
+artifacts/
+*.pt
+*.log

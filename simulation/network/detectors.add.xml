@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Stopline detectors (presence / actuation / queue sensing) at 230m (approx 9m before stop line) -->
+    <inductionLoop id="det_stop_n_0" lane="edge_n2c_0" pos="230.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_stop_n_1" lane="edge_n2c_1" pos="230.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_stop_s_0" lane="edge_s2c_0" pos="230.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_stop_s_1" lane="edge_s2c_1" pos="230.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_stop_e_0" lane="edge_e2c_0" pos="230.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_stop_e_1" lane="edge_e2c_1" pos="230.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_stop_w_0" lane="edge_w2c_0" pos="230.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_stop_w_1" lane="edge_w2c_1" pos="230.0" freq="1" file="NUL"/>
+
+    <!-- Advance detectors (upstream arrival sensing) at 120m -->
+    <inductionLoop id="det_adv_n_0" lane="edge_n2c_0" pos="120.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_adv_n_1" lane="edge_n2c_1" pos="120.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_adv_s_0" lane="edge_s2c_0" pos="120.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_adv_s_1" lane="edge_s2c_1" pos="120.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_adv_e_0" lane="edge_e2c_0" pos="120.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_adv_e_1" lane="edge_e2c_1" pos="120.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_adv_w_0" lane="edge_w2c_0" pos="120.0" freq="1" file="NUL"/>
+    <inductionLoop id="det_adv_w_1" lane="edge_w2c_1" pos="120.0" freq="1" file="NUL"/>
+</additional>
